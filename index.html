@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Monthly Budget Tracker</h1>
+            <div class="balance-box">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path fill="#142d4c"
+                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 17.9V19h-2v.9c-3.9-.5-7-3.8-7-7.9s3.1-7.4 7-7.9V5h2v.1c3.9.5 7 3.8 7 7.9s-3.1 7.4-7 7.9z" />
+                </svg>
+                <div>
+                    <p class="label">Total Balance</p>
+                    <p class="amount" id="total-balance">₹4,500.00</p>
+                </div>
+            </div>
+        </header>
+
+
+
+        <!-- Form + Entries Layout -->
+        <div class="horizontal-layout">
+            <!-- Form -->
+            <section class="form-section">
+                <h2>Add Entry</h2>
+                <form id="budget-form">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" id="description" name="description" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="text" id="amount" name="amount" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Choose</label>
+                        <select id="type" name="type">
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="add-btn">
+                            Add Entry
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Entries -->
+            <section class="entries-section">
+                <h2>Entries</h2>
+                <div class="entries-header">
+                    <div class="filters-info">
+                        <div class="totals">
+                            <div class="total-income">Income: ₹6,200</div>
+                            <div class="total-expense">Expense: ₹1,500</div>
+                        </div>
+                    </div>
+                    <div class="filter-buttons">
+                        <button id="show-income" class="filter-btn">Show/Hide Income</button>
+                        <button id="show-expense" class="filter-btn">Show/Hide Expense</button>
+                    </div>
+                </div>
+
+                <ul id="entry-list" class="entry-list">
+                    <li class="income">
+                        <span class="entry-desc">💼 Salary</span>
+                        <span class="entry-amt">+ ₹5,000</span>
+                    </li>
+                    <li class="expense">
+                        <span class="entry-desc">🍽️ Dining Out</span>
+                        <span class="entry-amt">- ₹800</span>
+                    </li>
+                    <li class="expense">
+                        <span class="entry-desc">🚗 Fuel</span>
+                        <span class="entry-amt">- ₹700</span>
+                    </li>
+                    <li class="income">
+                        <span class="entry-desc">💰 Freelance</span>
+                        <span class="entry-amt">+ ₹1,200</span>
+                    </li>
+                    <li class="income">
+                        <span class="entry-desc">💰 Freelance</span>
+                        <span class="entry-amt">+ ₹1,200</span>
+                    </li>
+                    <li class="income">
+                        <span class="entry-desc">💰 Freelance</span>
+                        <span class="entry-amt">+ ₹1,200</span>
+                    </li>
+                    <li class="income">
+                        <span class="entry-desc">💰 Freelance</span>
+                        <span class="entry-amt">+ ₹1,200</span>
+                    </li>
+                    <li class="income">
+                        <span class="entry-desc">💰 Freelance</span>
+                        <span class="entry-amt">+ ₹1,200</span>
+                    </li>
+                  
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
