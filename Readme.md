@@ -10,6 +10,7 @@ Build a fully functional **Income & Expense Tracker** using JavaScript. You are 
 ### ✅ 1. Form Submission
 - Capture input fields: `description`, `amount`, `date`, and `type` (income or expense).
 - Validate the inputs:
+  - Description cannot exceed 20 chars.
   - No field should be empty.
   - `amount` must be a valid number.
 - On successful validation:
